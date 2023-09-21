@@ -1,0 +1,82 @@
+@use "src/styles/variables";
+
+.tableTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  & th {
+    padding-bottom: 15px;
+    text-align: start;
+  }
+
+  & td {
+    vertical-align: top;
+    padding: 15px 0px 20px 0px;
+    white-space: nowrap;
+
+    &:first-child {
+      width: 20%;
+      padding-right: 30px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      width: 28%;
+      padding-right: 50px;
+    }
+
+    &:last-child {
+      padding-right: 30px;
+    }
+  }
+
+  & tr {
+    border-bottom: 1px solid variables.$separateLines;
+  }
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100%;
+}
+
+.emailField {
+  width: 75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rowFirstLine {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.date {
+  color: variables.$gray;
+  font-size: 14px;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.statusMessage {
+  color: variables.$gray;
+}
+
+.statusMessageError {
+  color: variables.$red;
+}
